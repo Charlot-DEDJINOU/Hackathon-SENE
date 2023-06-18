@@ -1,0 +1,91 @@
+.page-preinscription
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.titre-page-preinscription
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 21px;
+    color: #00A34D;
+    font-weight: 800;
+    margin-top: 50px;
+}
+.section-preinscription
+{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    justify-self: center;
+    margin: auto;
+    margin-top: 40px; 
+    height: 600px;
+
+}
+
+
+
+.titre-preinscription
+{
+    padding-top: 10px;
+    font-weight: 800;
+    text-align: center;
+    font-size: 18px;
+    color: #00A34D;
+    text-transform: uppercase;
+}
+.image-preinscription1
+{
+    background-image: url(../assets/Preinscription1.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    height: 450px;
+    border-radius: inherit;
+
+}
+.image-preinscription2
+{
+    background-image: url(../assets/Preinscription2.avif);
+    background-size: cover;
+    background-position: 50% 0;
+    height: 450px;
+    border-radius: inherit;
+
+}
+.text-hover
+{
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.95), 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-color: black ;
+    line-height: 40px;
+    filter: blur(0px);
+    opacity: 0.95;
+    border-radius: inherit;
+}
+
+.bloc-preinscription
+{
+    width: 40%;
+    cursor: pointer;
+    height: 85%;
+    /* border: solid; */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.95);
+}

@@ -1,0 +1,91 @@
+.label
+{
+    display: block;
+}
+.section-contact
+{
+    display: flex;
+    background-image: url('../assets/triangleleft.png');
+    background-size: cover;
+    height: auto;
+    margin: auto auto;
+    margin-top: 100px;
+}
+.formulaire-contact
+{
+    padding-top: 20px;
+    height: auto;
+    background-color: rgba(150, 150, 150, 0.46);
+    width: 95%;
+}
+.contact-part
+{
+    /* border: solid; */
+    width: 50%;
+    margin-left: 150px;
+    
+}
+.titre-contact
+{
+    font-size: 21px;
+    /* border: solid; */
+    margin: 10px auto 70px 10%;
+    width: 75%;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(21, 164, 223, 0.83) ;
+}
+.div-soumettre
+{
+    display: flex;
+    justify-content: right;
+    /* border: solid; */
+    width: 80%;
+    /* height: 40px; */
+    margin-bottom: 10px;
+    
+}
+.message-derreur
+{
+    width: 80%;
+    color: #ed0010;
+    text-align: center;
+    font-weight: bold;
+    /* background-color: white; */
+}
+
+.section-adresse
+{
+    display: flex;
+    flex-direction: column;
+    margin: 15% 3%;
+    justify-content: space-between;
+}
+.section-adresse h5
+{
+    font-weight: bold;
+    color: black;
+}
+.section-adresse
+{
+    color: rgba(21, 164, 223);
+    font-weight: 550;
+}
+input::placeholder, textarea::placeholder
+{
+    font-size: 15px;
+    padding-left: 5px;
+}
+.label
+{
+    /* border: solid; */
+    width: 100%;
+    text-align: left;
+}
+.section-contact form div input{
+    height: 30px;
+    border-radius: 5px;
+}
+.section-contact form div textarea{
+    border-radius: 5px;
+}

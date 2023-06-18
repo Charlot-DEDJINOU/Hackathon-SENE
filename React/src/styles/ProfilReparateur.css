@@ -1,0 +1,201 @@
+.Page-reparateur {
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-bottom: -30px;
+    margin-top: 70px;
+}
+
+.actif {
+    border-bottom: solid rgb(0, 163, 77);
+    color: rgb(0, 163, 77);
+}
+
+.inactif {
+    border-bottom: solid rgb(0, 163, 77);
+    color: rgb(0, 163, 77);
+
+}
+
+.vertNote
+{
+    color: rgb(0,163,77);
+}
+
+.Profil-reparateur {
+    width: 60%;
+    margin: 70px 0px;
+}
+
+.Profil-reparateur>.Entete {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    justify-items: center;
+    padding: 5px 20px;
+}
+
+.Profil-reparateur>.Entete p {
+    font-weight: bold;
+    height: 100%;
+    cursor: pointer;
+    width: 40%;
+}
+.Informations-Profil-reparateur {
+    display: flex;
+    justify-content: space-between;
+    height: 390px;
+    width: 100%;
+    justify-items: center;
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.bloc-image-reparateur {
+    width: 40%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.bloc-image-reparateur>* {
+    border-radius: 50%;
+    border: 5px solid rgb(196, 211, 196);
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(51, 51, 51);
+}
+
+.bloc-nom-reparateur {
+    justify-self: center;
+    height: 80%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: -10px;
+}
+
+.bloc-nom-reparateur>.nom-reparateur {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: rgb(0, 163, 77);
+}
+.experience-projets {
+    margin-top: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px 80px;
+
+}
+
+.apropos-reparateur {
+    background-color: white;
+    margin-top: 15px;
+    padding: 25px 80px;
+    width: 100%;
+
+}
+
+.apropos-reparateur>p {
+    text-align: justify;
+}
+
+.apropos-reparateur>h6 {
+    width: 100%;
+    border-bottom: solid rgb(0, 163, 77);
+}
+
+.titre-page-reparateur {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(0, 163, 77);
+}
+
+.bloc-premium {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.45);
+}
+.hidden-bloc
+{
+    height: 100%;
+    width: 22%;
+}
+.hidden-bloc img
+{
+    width: 90%;
+    height: 42%;
+}
+.hidden-bloc ul
+{
+    width: 100%;
+    height: 50%;
+    font-size: 12px;
+}
+.hidden-bloc ul li
+{
+    margin-top: 5px;
+}
+.Bouton-premium {
+    width: 100%;
+    border: solid;
+    height: 20%;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 163, 77);
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+
+.bloc-expérience-reparateur,
+.bloc-projets-reparateur {
+    width: 46%;
+    text-align: left;
+}
+
+.bloc-expérience-reparateur>label,
+.bloc-projets-reparateur>label {
+    border-bottom: solid rgb(0, 163, 77);
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.bloc-premium>p>span {
+    font-size: 18px;
+}
+
+.bloc-diplomes {
+    margin-top: 15px;
+    background-color: white;
+    padding: 25px 80px;
+}
+
+.edit-ville-quartier {
+    display: flex;
+    background-color: white;
+    margin-top: 15px;
+    height: 90px;
+    padding-top: 10px;
+}
+
+.edit-ville-quartier>div {
+    width: 50%;
+    padding-left: 30px;
+
+}

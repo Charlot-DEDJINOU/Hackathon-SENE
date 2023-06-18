@@ -1,0 +1,97 @@
+.product{
+    color: black;
+    width: 275px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    transition: all;
+    transition-duration: 2s;
+    box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.3) ;
+    border-radius: 5px;
+    margin: 30px;
+}
+.product1{
+    color: black;
+    width: 275px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    transition: all;
+    transition-duration: 2s;
+    box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.3) ;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+.product .detail , .product1 .detail {
+    width: 95%;
+    height: 80%;
+    overflow-y: scroll;
+    text-align: center;
+}
+.product h5,.product .retour , .product1 h5,.product1 .retour{
+    align-self: center;
+}
+.product:hover , .product1:hover{
+    box-shadow: -1px 1px 3px 2px rgba(0,0,0,0.3) ;
+}
+.product .img , .product1 .img{
+    width: 95%;
+    height: 55%;
+}
+.product .img .carousel , .product1 .img .carousel{
+    width: 100%;
+    height: 100%;
+} 
+.product .img .carousel .img , .product1 .img .carousel .img{
+    width: 100%;
+    height: 210px;
+}
+.product .nom , .product1 .nom{
+    width: 92%;
+}
+.product .infoaction , .product1 .infoaction{
+    width: 92%;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.product .infoaction div , .product1 .infoaction div{
+    display: flex;
+    flex-direction: column;
+}
+.product .infoaction .Badge , .product1 .infoaction .Badge {
+    display: block;
+    width: 50px ;
+    height: 30px;
+    border-radius: 5px;
+    margin-right:15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(21, 164, 223, 0.83);
+    color: white;
+}
+.product .infoClick , .product1 .infoClick{
+    width: 92%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.product .infoClick div , .product1 .infoClick div{
+    width:75%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product::-webkit-scrollbar{
+    width: 1px;
+}

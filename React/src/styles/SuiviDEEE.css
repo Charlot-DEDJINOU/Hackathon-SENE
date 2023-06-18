@@ -1,0 +1,37 @@
+.page1{
+    width: 50%;
+    height: 300px;
+    margin: 70px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color:rgb(0,163,77); 
+}
+.page-suivi
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 675px;
+    margin-top: 70px;
+}
+.page-suivi .recherche
+{
+    width: 85%;
+}
+.page-suivi .recherche .recherche-line
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.page-suivi .titre
+{
+    width: 85%;
+    margin-top: 50px;
+}

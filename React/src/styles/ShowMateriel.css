@@ -1,0 +1,106 @@
+.showmateriel
+{
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+}
+.showmateriel form
+{
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+}
+.showmateriel .textareaGroup
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.showmateriel .textareaGroup textarea
+{
+    width: 100%;
+    height: 80px;
+    border: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(212, 207, 207);
+    border-radius: 5px;
+    resize: none;
+}
+.showmateriel form .selectcheck
+{
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.showmateriel form .selectcheck select
+{
+    width: 35%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+.showmateriel form .selectcheck .check span
+{
+    display: inline-block;
+}
+.showmateriel form .selectcheck .check
+{
+    width: 30%;
+    height: 30px;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+}
+.showmateriel form .selectcheck .check div
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showmateriel form .dates
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    border: 1px solid red;
+}
+.showmateriel form .dates div label
+{
+    display: inline-block;
+}
+.showmateriel form .dates div
+{
+    width: 32%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.showmateriel form .dates div .date
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(212, 207, 207);
+    border-radius: 5px;
+}

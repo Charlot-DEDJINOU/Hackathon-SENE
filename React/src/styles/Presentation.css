@@ -1,0 +1,49 @@
+.presentation {
+    width: 100%;
+    height: 690px;
+    margin-top: 70px;
+}
+.presentation .carousel{
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.presentation .carousel .item {
+    width: 100%;
+    height: 690px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.presentation .carousel .item .carousel-p {
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.presentation .carousel .item .carousel-titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px ;
+    text-transform: uppercase;
+    margin-bottom: 150px;
+    letter-spacing: 2px;
+}
+.presentation .carousel .carousel1 {
+    background-image: url(../assets/caroussel1_copie.jpg);
+    background-size: cover;
+    opacity: 0.9;
+    font-size: 50px !important ;
+}
+.presentation .carousel .carousel2{
+    background-image: url(../assets/caroussel2.jpg);
+    background-size: cover;
+    opacity: 0.9;
+}
+.presentation .carousel .carousel3{
+    background-image: url(../assets/car.png);
+    background-size: cover;
+    opacity: 0.9;
+}

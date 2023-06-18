@@ -1,0 +1,85 @@
+.presentationlieudedepot .presentationlieu .presentation .nom-ville span {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 5px;
+}
+.presentationlieudedepot {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.presentationlieudedepot .presentationlieu {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+.presentationlieudedepot .presentationlieu .autreslieux{
+    width: 23%;
+    height: 100%;
+    overflow-y: scroll;
+    border-left: 5px solid rgb(0,163,77);
+}
+.presentationlieudedepot .presentationlieu .presentation {
+    width: 75%;
+    height: 100%;
+    margin-top: -70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.presentationlieudedepot .presentationlieu .presentation .infolieu {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.presentationlieudedepot .presentationlieu .presentation .nom-ville {
+    width: 90%;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.presentationlieudedepot .presentationlieu .presentation .nom-ville p {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    padding: 5px;
+}
+.presentationlieudedepot .presentationlieu .presentation .mapouter {
+    width: 100%;
+    height: 45%;
+}
+.presentationlieudedepot .presentationlieu .presentation .infolieu img {
+    width: 475px;
+    height: 250px;
+    object-fit: fill;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3);
+}
+.presentationlieudedepot .presentationlieu .presentation .infolieu .description {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+    font-size: 17px;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    width:100%;
+    height:100%
+}
+.gmap_iframe {
+    width: 100%!important;
+    height:100%!important ;
+    
+}

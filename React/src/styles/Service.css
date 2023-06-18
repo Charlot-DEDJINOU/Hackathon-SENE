@@ -1,0 +1,8 @@
+.left{
+    background-image: url(../assets/triangleleft.png);
+    color: black;
+}
+.right{
+    background-image: url(../assets/triangleright.png);
+    color: black;
+}

@@ -1,0 +1,144 @@
+.Chat-body
+{
+    width: 71%;
+    height: 675px;
+}
+.wrapper 
+{
+    height: 100%;
+    width: 100%;
+}
+.chat-area 
+{
+    width: 100%;
+    height: 100%;
+}
+.chat-area header 
+{
+    width: 100%;
+    height: 80px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+.wrapper header .content 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper header .content .nom_prenom
+{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.statut-enligne {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.statut-enligne > span 
+{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.chat-box {
+    width: 100%;
+    height: 79%;
+    background-image: url(../assets/3d8c2f2c82c1c9ef1e27be645cd1aa17.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-box .containere
+{
+    height: 100%;
+    width: 93%;
+    overflow-y: scroll;
+    margin: 0px auto;
+}
+.chat-box .containere-image
+{
+    height: 90%;
+    width: 80%;
+    object-fit: contain;
+}
+.chat-area .typing-area
+{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.typing-area .input-field {
+    height: 100%;
+    width: 82%;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 0px 0 0 5px;
+    outline: none;
+}
+.typing-area .icone-file
+{
+    width: 7%;
+    height: 100%;
+    background-color: rgb(0, 163, 77);
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.typing-area .icone-file .icone
+{
+    width: 70%;
+    height: 70%;
+}
+.typing-area button {
+    width: 7%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(0, 163, 77);
+}
+.content .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(0, 163, 77);
+}
+.chat-area header span {
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+}

@@ -1,0 +1,188 @@
+.dashboard
+{
+    width: 100%;
+    height: 675px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.dashboard .dashboard-header
+{
+    width: 85%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.dashboard .dashboard-header img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.dashboard .dashboard-header div
+{
+    width: 85%;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashboard .dashboard-header div .name
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+.dashboard .dashboard-header div .admin
+{
+    opacity: 0.8;
+}
+.dashboard .dashboard-body
+{
+    width: 100%;
+    height: 77%;
+    display: flex;
+}
+.dashboard .dashboard-body .dashboard-tables
+{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.dashboard .dashboard-body .dashboard-table
+{
+    width: 73%;
+    height: 100%;
+    overflow-y: scroll;
+    margin: 0px auto;
+}
+.dashboard .dashboard-body .dashboard-tables h3
+{
+    color: white;
+    background-color: #00A34D;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+.dashboard .dashboard-body .dashboard-tables .table
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0px;
+    padding: 10px 10px 10px 50px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.3);
+    
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+}
+.Deee
+{
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+}
+.Deee form
+{
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+}
+.Deee .textareaGroup
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.Deee .textareaGroup textarea
+{
+    width: 100%;
+    height: 80px;
+    border: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(212, 207, 207);
+    border-radius: 5px;
+    resize: none;
+}
+.Deee form .selectcheck
+{
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.Deee form .selectcheck select
+{
+    width: 35%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+.Deee form .selectcheck .check span
+{
+    display: inline-block;
+}
+.Deee form .selectcheck .check
+{
+    width: 30%;
+    height: 30px;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+}
+.Deee form .selectcheck .check div
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Deee form .dates
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.Deee form .dates div span
+{
+    display: inline-block;
+}
+.Deee form .dates div
+{
+    flex: 1;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.Deee form .dates div .date
+{
+    opacity: 0.8;
+}

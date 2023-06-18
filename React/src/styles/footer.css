@@ -1,0 +1,191 @@
+/* ---------------------------------General------------------------- */
+.footer-container
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #2D3E2D;
+    color: white;
+    margin-top: 70px;
+}
+.footer-container span
+{
+    display: inline-block;
+}
+
+.boule-barre
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0px;
+}
+.barre 
+{
+    height: 3px;
+    width: 97.1%;
+    background-color: white;
+    position: relative;
+    top: -3px;
+    margin: 0px;
+}
+.Barre{
+    width: 90%;
+    margin: 0px auto;
+}
+
+/* -----------------------------Haut du footer---------------------- */
+
+.top-footer
+{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    margin: 15px auto 0px auto;
+    width: 79%;
+    /* border: solid; */
+}
+.logo
+{
+    width: 33%;
+}
+.logo img
+{
+    height: 60px;
+    width: 50;
+}
+.social-network
+{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+}
+.social-network div
+{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.RS 
+{
+    color: #00A34D;
+    width: 25px;
+    height: 25px;
+}
+.phone
+{
+    width: 33%;
+    font-weight: bold;
+    text-align: right;
+    justify-content: right;
+    margin-right: 10px;
+    display: flex;
+    /* border: solid; */
+}
+.icon-phone
+{
+    margin-right: 10px;
+}
+
+/* --------------------------------------------Corps du footer------------------------------------- */
+
+.middle-footer
+{
+    display: flex;
+    justify-content: space-between;
+    /* border: solid; */
+    width: 78%;
+    margin: auto;
+}
+.middle-footer div
+{
+    
+    list-style-type: none;
+}
+.middle-footer div ul
+{
+    list-style-type: none;
+    /* border: solid; */
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.middle-footer>div>ul>li
+{
+    margin-left: -35px;
+}
+
+h3
+{
+color: #00A34D ;
+}
+    
+.middle-footer div ul li
+{
+    text-align: left;
+}
+
+.ewaste
+{
+height: 40px;
+margin-right: 10px;
+}
+.Mastercard
+{
+    width: 100px;
+}
+.partners 
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.below-patners
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: solid; */
+    height: 73%;
+}
+.container-soutenir
+{
+    display: flex;
+    justify-content: right;
+}
+.nous-soutenir
+{
+    border: solid;
+    background-color: #00A34D;
+    font-weight: bold;
+    width: 130px;
+    text-align: center;
+    justify-self: right;
+}
+/* ---------------------------------------Sous le footer--------------------------- */
+.below-footer
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 78%;
+    top: -10px;
+    /* border: solid; */
+    margin: 5px auto;
+}
+
+.final-footer
+{
+display: flex;
+justify-content: space-between;
+width: 35%;
+/* border: solid; */
+}
+

@@ -1,0 +1,163 @@
+.header{
+    background-color: rgb(0,163,77);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top : 0 ;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.header .header-logo {
+    width: 8%;
+    height: 90%;
+    color: white;
+}
+.header .header-logo .logo {
+    width: 100%;
+    height: 100%;
+}
+.header .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 65%;
+    margin-right: -5%;
+}
+.header .header-nav .link {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header .header-nav .link-deconnecter {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.header-nav .link-drop {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 8px;
+}
+.header .header-nav .link:hover , .header-nav .link-drop:hover {
+    color: black;
+}
+.header .header-nav .panier {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.header .header-nav .message-header
+{
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 7px;
+    width: 85px;
+}
+.header .header-nav .message-header .icone-messenger
+{
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+.header .header-nav .message-header .notification
+{
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+.header .header-nav .message-header .notification span
+{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+    margin-top: -10px;
+    z-index: 6;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+.header .header-nav .message-header .icone-notification
+{
+    width: 30px;
+    height: 30px;
+    color: white;
+    animation : swingAnimation 0.5s ease-in-out infinite alternate;
+}
+@keyframes swingAnimation {
+    0% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+.header .header-nav .panier .image-panier{
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+.header .header-nav .panier .Badge{
+    color: rgb(0,163,77);
+    display: inline-block;
+    margin-top: -15px;
+}
+table th ,table td{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+table th{
+    font-size: 18px;
+    font-weight: bold;
+}
+.effectue{
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+.effectue .icone{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(0,163,77);;
+    color: white;
+    margin-bottom: 10px;
+}
+.effectue .icone span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.effectue .texte{
+    font-size: 16px;
+    font-weight: 500;
+}
