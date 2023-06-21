@@ -6,12 +6,12 @@ import Header from "./Header" ;
 import Footer from "./footer" ;
 import Login from "./Connexion";
 import Register from "./Register" ;
-import Notifications from "./Notification/Notifications";
-// import Accueil from "./Accueil" ;
+import Accueil from "./Accueil" ;
+import Produits from "./Produits";
+// import Notifications from "./Notification/Notifications";
 // import Apropos from "./Apropos" ;
 // import ListeTechnicien from "./TrouverTechnicien"
 // import LieuxDepot from "./LieuxDeDepot";
-// import Produits from "./Produits.js";
 // import EnregistrerDEEE from "./EnregistrerDEEE";
 // import Reparateur from "./Reparateur" ;
 // import PresentationLieuDeDepot from "./PresentationLieuDeDepot";
@@ -33,12 +33,12 @@ function App() {
           <CartProvider>
               <Header />
               <Routes>
-                  <Route path="/" element={<Notifications />} />
+                  <Route path="/" element={<Accueil />} />
                   <Route path="Login" element={<Login />} />
                   <Route path="Inscription" element={<Register />} />
+                  <Route path="produits" element={<Produits />} />
                   {/* <Route path="reparateurs" element={<ListeTechnicien />} />
                   <Route path="lieux_de_depot" element={<LieuxDepot />} />
-                  <Route path="produits" element={<Produits />} />
                   <Route path="enregistrer_DEEEs" element={<EnregistrerDEEE />} />
                   <Route path="presentationLieu/:id" element={<PresentationLieuDeDepot />} />
                   <Route path="reparateur" element={<Reparateur />} />
