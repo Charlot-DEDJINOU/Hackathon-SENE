@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\UserController ;
 use App\Http\Controllers\NotificationController ;
+use App\Http\Controllers\MaterielController ;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login',  [UserController::class, 'authenticate']);
@@ -14,4 +15,5 @@ Route::get('/notifications' , [NotificationController::class, 'index']) ;
 Route::get('/notification/{notification}' , [NotificationController::class, 'show']) ;
 Route::post('/notification/update/{notification}' , [NotificationController::class, 'update']) ;
 Route::get('/user/notifications' , [NotificationController::class, 'userNotifications']) ;
+Route::post('/createMateriel' , [MaterielController::class, 'create']) ;
 
