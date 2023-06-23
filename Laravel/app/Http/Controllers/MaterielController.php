@@ -57,13 +57,11 @@ class MaterielController extends Controller
 
         $materiel = Materiel::find($request->input('id'));
 
-        if (!$materiel) {
-            return response()->json(['message' => 'Cet utilisateur n\'existe pas'], 404);
-        }
+        if (!$materiel)
+            return response()->json(['message' => 'Ce produit n\'existe pas'], 404);
 
         $data = $request->all();
-        $data["motdepasse"] = bcrypt($data["motdepasse"]);
-
+    
         if ($materiel->update($data)) {
             return response()->json(['message' => 'Mise à jour réussie'], 200);
         } else {
@@ -71,7 +69,7 @@ class MaterielController extends Controller
         }
     }
 
-    public function getMateirel(Request $request)
+    public function getMateriel(Request $request)
     {
         $id = $request->query('id');
 
@@ -81,7 +79,7 @@ class MaterielController extends Controller
             if ($materiel) {
                 return response()->json($materiel, 200);
             } else {
-                return response()->json(['message' => 'Cet utilisateur n\'existe pas'], 201);
+                return response()->json(['message' => 'Cet produit n\'existe pas'], 201);
             }
         } else {
             return response()->json(['message' => 'Pas assez de données'], 404);

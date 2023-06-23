@@ -16,4 +16,5 @@ Route::get('/notification/{notification}' , [NotificationController::class, 'sho
 Route::post('/notification/update/{notification}' , [NotificationController::class, 'update']) ;
 Route::get('/user/notifications' , [NotificationController::class, 'userNotifications']) ;
 Route::post('/createMateriel' , [MaterielController::class, 'create']) ;
+Route::get('/materiels' , [MaterielController::class, 'getMateriels']) ;
 
