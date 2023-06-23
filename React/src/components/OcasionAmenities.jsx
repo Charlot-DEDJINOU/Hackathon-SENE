@@ -44,10 +44,10 @@ const Icon = styled.div`
 function OcasionAmenities() {
 
   useEffect(()=> {
-    fetch("http://localhost/projets/api/materiel/materiels.php")
+    fetch("http://localhost:8000/api/materiels")
         .then((response) => response.json())
         .then((materiels) => {
-          setData(materiels["materiels"])
+          setData(materiels)
         })
         .catch((error) => alert(error.stack));
     } , [])

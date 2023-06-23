@@ -19,11 +19,12 @@ border-radius:5px ;
 export default function Produits(){
 
     useEffect(()=> {
-        fetch("http://localhost/projets/api/materiel/materiels.php")
+        fetch("http://localhost:8000/api/materiels")
             .then((response) => response.json())
             .then((materiels) => {
-              setAllData(materiels["materiels"])
-              setData(materiels["materiels"])
+              setAllData(materiels)
+              setData(materiels)
+              console.log(materiels)
             })
             .catch((error) => alert(error.stack));
         } , [])

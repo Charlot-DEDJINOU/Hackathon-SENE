@@ -37,7 +37,7 @@ export default function Equipement(props){
 
      const { addItem , getItem} = useCart() ;
 
-     const images = props.image.split(",")
+     const images = props.url_image.split(",")
 
     return( 
             <div className={props.Class} id={props.id} onMouseLeave={()=>!page ? Page(props.id) : null} >
@@ -48,7 +48,7 @@ export default function Equipement(props){
                             <Carousel interval={4000} pause={false} className="carousel">
                                    {
                                     images.map(item => {
-                                        const photo = "http://localhost/projets/images/"+item
+                                        const photo = "http://localhost/Projets/images/"+item
                                         return <Carousel.Item>
                                             <img src={photo} alt="" className="img"/>
                                         </Carousel.Item>
