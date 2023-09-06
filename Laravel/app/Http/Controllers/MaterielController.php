@@ -73,19 +73,19 @@ class MaterielController extends Controller
     public function getMateriel(Request $request)
     {
         $id = $request->query('id');
-
-        if (isset($id)) {
-            $materiel = Materiel::find($id);
-
-            if ($materiel) {
-                return response()->json($materiel, 200);
-            } else {
-                return response()->json(['message' => 'Cet produit n\'existe pas'], 201);
-            }
-        } else {
-            return response()->json(['message' => 'Pas assez de données'], 404);
+    
+        if (!$id) {
+            return response()->json(['message' => 'Pas assez de données'], 400);
         }
-    }
+    
+        $materiel = Materiel::find($id);
+    
+        if ($materiel) {
+            return response()->json($materiel, 200);
+        }
+    
+        return response()->json(['message' => 'Cet produit n\'existe pas'], 404);
+    }    
 
     public function getMateriels()
     {
