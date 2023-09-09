@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Quartier;
+use App\Models\Ville;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,26 +13,24 @@ class QuartierController extends Controller
     {
 
         $validator = Validator::make($request->all() , [
-            'nom_quartier' => 'bail|required|string'
+            'nom_quartier' => 'bail|required|string',
+            'ville' => 'bail|required|string'
         ]) ;
         
         if($validator->fails())
             return response()->json(['errors' => $validator->errors()] , 203) ;
             
-        $nomquartier = $request->input('nom_quartier');
+        $ville = Ville::firstOrCreate(['nom_ville' => $request->input('ville')]);
 
-        $existingquartier = Quartier::where('nom_quartier', $nomquartier)->first();
+        $quartier = Quartier::firstOrCreate([
+            'nom_quartier' => $request->input('nom_quartier') , 
+            "id_ville" => $ville->id
+        ]);
 
-        if ($existingquartier)
-            return response()->json(['message' => "Cette quartier existe déjà"], 201);
+        if ($quartier->save())
+            return response()->json($quartier, 200);
 
-        $quartier = Quartier::create($request->all()) ;
-
-        if ($quartier->save()) {
-            return response()->json(['message' => "Ajout réussi"], 200);
-        } else {
-            return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
-        }
+        return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
     }
 
     public function read() 

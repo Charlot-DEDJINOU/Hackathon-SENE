@@ -12,26 +12,27 @@ class LieuDepotController extends Controller
     public function create(LieuDepotRequest $request)
     {
         try {
-            // Recherchez ou créez la ville et le quartier
+    
             $ville = Ville::firstOrCreate(['nom_ville' => $request->input('ville')]);
-            $quartier = Quartier::firstOrCreate(['nom_quartier' => $request->input('quartier')]);
+            Quartier::firstOrCreate([
+                'nom_quartier' => $request->input('quartier') , 
+                "id_ville" => $ville->id
+            ]);
 
-            // Ajoutez les identifiants de ville et de quartier aux données de la demande
-            $data = $request->all();
-            $data['id_ville'] = $ville->id;
-            $data['id_quartier'] = $quartier->id;
+            $lieuDepot = LieuDepot::firstOrCreate($request->all());
 
-            // Créez un nouvel enregistrement LieuDepot
-            $lieuDepot = LieuDepot::create($data);
-
-            if ($lieuDepot) {
-                return response()->json(['message' => "Ajout réussi"], 200);
-            } else {
-                return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
-            }
+            if ($lieuDepot) 
+                return response()->json($lieuDepot , 200);
+           
+            return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
     
         } catch (ValidationException $e) {
             return response()->json(['errors' => $e->errors()], 422);
         }
+    }
+
+    public function read()
+    {
+        return response()->json(LieuDepot::all() , 200);
     }
 }

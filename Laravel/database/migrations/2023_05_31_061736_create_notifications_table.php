@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');
             $table->text('notification');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -18,20 +18,12 @@ class VilleController extends Controller
         if($validator->fails())
             return response()->json(['errors' => $validator->errors()] , 203) ;
             
-        $nomVille = $request->input('nom_ville');
+        $ville = Ville::firstOrCreate($request->all());
 
-        $existingVille = Ville::where('nom_ville', $nomVille)->first();
+        if ($ville->save())
+            return response()->json($ville, 200);
 
-        if ($existingVille)
-            return response()->json(['message' => "Cette ville existe déjà"], 201);
-
-        $ville = Ville::create($request->all()) ;
-
-        if ($ville->save()) {
-            return response()->json(['message' => "Ajout réussi"], 200);
-        } else {
-            return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
-        }
+        return response()->json(['message' => "Échec de l'ajout. Une erreur s'est produite lors de l'ajout"], 201);
     }
 
     public function read() 
