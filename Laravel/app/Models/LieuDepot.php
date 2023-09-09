@@ -10,8 +10,8 @@ class LieuDepot extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_quartier',
-        'id_ville',
+        'quartier',
+        'ville',
         'nom',
         'longitude',
         'latitude',
