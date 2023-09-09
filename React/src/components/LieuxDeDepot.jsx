@@ -5,13 +5,13 @@ import { useState , useEffect} from "react"
 export default function LieuxDepot() {
 
     useEffect(()=> {
-        fetch("http://localhost/projets/api/lieu_depot/lieux_depot.php")
+        fetch("http://localhost:8000/api/lieuDepots")
             .then((response) => response.json())
             .then((lieux_depot) => {
-                setAlllieux(lieux_depot["lieu_depots"])
-                setlieux(lieux_depot["lieu_depots"])
-                setquartiers(lieux_depot["lieu_depots"].map(item => {return item.quartier}))
-                setvilles(lieux_depot["lieu_depots"].map(item => {return item.ville}).filter((value, index, self) => self.indexOf(value) === index))
+                setAlllieux(lieux_depot)
+                setlieux(lieux_depot)
+                setquartiers(lieux_depot.map(item => {return item.quartier}))
+                setvilles(lieux_depot.map(item => {return item.ville}).filter((value, index, self) => self.indexOf(value) === index))
             })
             .catch((error) => alert(error.stack));
         } , [])
@@ -26,7 +26,7 @@ export default function LieuxDepot() {
     const [villes , setvilles] = useState([])
 
     const Lieux = lieux.map(item=>{
-        return <Place {...item} />
+        return <Place {...item} key={item.id}/>
     })
 
     function RechercherVille()

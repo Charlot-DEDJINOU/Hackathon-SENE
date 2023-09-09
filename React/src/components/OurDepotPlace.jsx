@@ -43,12 +43,12 @@ const Icon = styled.div`
 function OurDepotPlace() {
 
   useEffect(()=> {
-    fetch("http://localhost/projets/api/lieu_depot/lieux_depot.php")
+    fetch("http://localhost:8000/api/lieuDepots")
         .then((response) => response.json())
-        .then((lieux_depot) => {
-            setAlllieux(lieux_depot["lieu_depots"])
+        .then((LieuDepot) => {
+            setAlllieux(LieuDepot)
         })
-        .catch((error) => alert(error.stack));
+        .catch((error) => console.log(error.stack));
     } , [])
 
     const [Alllieux , setAlllieux] = useState([])
@@ -56,7 +56,7 @@ function OurDepotPlace() {
     const navigate = useNavigate()
     const Lieux = Alllieux.filter(item => item.id <= 4).map(item=>{
       return(
-        <Place {...item} />
+        <Place {...item} key={item.id}/>
       )
     })
   return (
@@ -72,4 +72,5 @@ function OurDepotPlace() {
 
   )
 }
+
 export default OurDepotPlace

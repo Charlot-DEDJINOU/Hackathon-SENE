@@ -11,32 +11,20 @@ export default function PresentationLieuDeDepot() {
     const {id} = useParams()
 
     useEffect(()=> {
-        fetch("http://localhost/projets/api/lieu_depot/lieux_depot.php")
-            .then((response) => response.json())
-            .then((lieux_depot) => {
-                setAlllieux(lieux_depot["lieu_depots"])
-                setlieu(lieux_depot["lieu_depots"].filter(item => item.id === parseInt(id))[0])
-            })
-            .catch((error) => alert(error.stack));
-        } , [id])
+        fetch("http://localhost:8000/api/lieuDepots")
+        .then((response) => response.json())
+        .then((LieuDepot) => {
+            setAlllieux(LieuDepot)
+        })
+        .catch((error) => console.log(error.stack));
+    } , [id])
     
     const [Alllieux , setAlllieux] = useState([])
-    const [Lieu , setlieu] = useState( {
-        "id": 1,
-        "quartier": "Zè",
-        "ville": "Abomey-Calavi",
-        "nom": "CEG AKPAKPA",
-        "longitude": 0.6,
-        "latitude": 0.6,
-        "img": "../assets/lieu1.jpg",
-        "decris": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "repere": "Cotonou premier von &agrave; gauche au niveau du march&eacute;",
-        "publier": 0
-    })
+    const [Lieu , setlieu] = useState([])
 
     const Lieux = Alllieux.filter(item => item.id !== parseInt(id)).map(item=>{
         return(
-          <Place {...item} />
+          <Place {...item} key={item.id}/>
         )
       })
 

@@ -58,7 +58,7 @@ function OcasionAmenities() {
 
   const allquipements= data.filter(item => item.id < 5).map(item=>{
     item.Class="product1"
-    return <Equipement {...item} />
+    return <Equipement {...item} key={item.id}/>
   })
 
   return (

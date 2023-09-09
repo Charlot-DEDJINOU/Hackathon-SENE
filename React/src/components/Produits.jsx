@@ -37,7 +37,7 @@ export default function Produits(){
 
     const produits=data.map(item=>{
         item.Class="product"
-        return <Equipement {...item} />
+        return <Equipement {...item} key={item.id}/>
     })
 
     function search(e){
