@@ -11,7 +11,7 @@ class Materiel extends Model
 
     protected $fillable = [
         'designation',
-        'prix_unitaire',
+        'price',
         'etat',
         'type',
         'url_image',
