@@ -10,11 +10,11 @@ import Accueil from "./Accueil" ;
 import Produits from "./Produits";
 // import Notifications from "./Notification/Notifications";
 // import Apropos from "./Apropos" ;
-// import ListeTechnicien from "./TrouverTechnicien"
-// import LieuxDepot from "./LieuxDeDepot";
+import ListeTechnicien from "./TrouverTechnicien"
+import LieuxDepot from "./LieuxDeDepot";
 // import EnregistrerDEEE from "./EnregistrerDEEE";
-// import Reparateur from "./Reparateur" ;
-// import PresentationLieuDeDepot from "./PresentationLieuDeDepot";
+import Reparateur from "./Reparateur" ;
+import PresentationLieuDeDepot from "./PresentationLieuDeDepot";
 // import EnvoyerMail from "./EnvoyerMail"
 // import ChangerMotdepasse from "./ChangerMotdepasse";
 // import Blog from "./Blog"
@@ -37,11 +37,12 @@ function App() {
                   <Route path="Login" element={<Login />} />
                   <Route path="Inscription" element={<Register />} />
                   <Route path="produits" element={<Produits />} />
-                  {/* <Route path="reparateurs" element={<ListeTechnicien />} />
                   <Route path="lieux_de_depot" element={<LieuxDepot />} />
-                  <Route path="enregistrer_DEEEs" element={<EnregistrerDEEE />} />
                   <Route path="presentationLieu/:id" element={<PresentationLieuDeDepot />} />
+                  <Route path="reparateurs" element={<ListeTechnicien />} />
                   <Route path="reparateur" element={<Reparateur />} />
+                  {/* 
+                  <Route path="enregistrer_DEEEs" element={<EnregistrerDEEE />} />
                   <Route path="A_propos" element={<Apropos />} />
                   <Route path="EnvoyerMail" element={<EnvoyerMail/>} />
                   <Route path="ChangerMotdepasse" element={<ChangerMotdepasse />} />
