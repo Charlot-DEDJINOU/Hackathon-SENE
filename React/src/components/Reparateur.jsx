@@ -153,32 +153,32 @@ export default function EnregistrerDEEE() {
   const { register, handleSubmit , formState: { errors } } = useForm();
 
   useEffect(()=> {
-    fetch("http://localhost/projets/api/ville/villes.php")
+    fetch("http://localhost:8000/api/villes")
         .then((response) => response.json())
         .then((villes) => {
-          setvilles(villes["villes"])
-          setAllvilles(villes["villes"])
+          setvilles(villes)
+          setAllvilles(villes)
         })
         .catch((error) => console.log(error.stack));
     } , [])
 
   useEffect(()=> {
-    fetch("http://localhost/projets/api/quartier/quartiers.php")
+    fetch("http://localhost:8000/api/quartiers")
         .then((response) => response.json())
         .then((quartiers) => {
-          setquartiers(quartiers["quartiers"])
-          setAllquartiers(quartiers["quartiers"])
+          setquartiers(quartiers)
+          setAllquartiers(quartiers)
         })
-        .catch((error) => alert(error.stack));
+        .catch((error) => console.log(error.stack));
     } , [])
 
     useEffect(()=> {
-      fetch("http://localhost/projets/api/metier/metiers.php")
+      fetch("http://localhost:8000/api/metiers")
           .then((response) => response.json())
           .then((metiers) => {
-            Setmetiers(metiers["metiers"])
+            Setmetiers(metiers)
           })
-          .catch((error) => alert(error.stack));
+          .catch((error) => console.log(error.stack));
       } , [])
 
     function Capitalize(str) {

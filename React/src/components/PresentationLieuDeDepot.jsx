@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom"
 import image from '../assets/lieu2.jpg';
 import "../styles/PresentationLieuDeDepot.css"
 
-
-
 export default function PresentationLieuDeDepot() {
 
     const {id} = useParams()
@@ -15,12 +13,14 @@ export default function PresentationLieuDeDepot() {
         .then((response) => response.json())
         .then((LieuDepot) => {
             setAlllieux(LieuDepot)
+            const lieu = LieuDepot.filter(item => item.id === parseInt(id))[0];
+            setlieu(lieu);
         })
         .catch((error) => console.log(error.stack));
     } , [id])
     
     const [Alllieux , setAlllieux] = useState([])
-    const [Lieu , setlieu] = useState([])
+    const [Lieu , setlieu] = useState({})
 
     const Lieux = Alllieux.filter(item => item.id !== parseInt(id)).map(item=>{
         return(
@@ -29,7 +29,7 @@ export default function PresentationLieuDeDepot() {
       })
 
     function Capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return str;
     }
 
     return (
@@ -42,11 +42,11 @@ export default function PresentationLieuDeDepot() {
                     </div>
                     <div className="infolieu">
                         <img src={image} alt=""/>
-                        <div className="description">{Lieu.decris}</div>
+                        <div className="description mx-5">{Lieu.description}</div>
                     </div>
                     <div className="mapouter">
                         <div className="gmap_canvas">
-                            <iframe title="iframe" className="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=2880 Cotonou, New York&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            <iframe title="iframe" className="gmap_iframe" frameborder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=2880 Cotonou, New York&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                         </div>
                     </div>
                 </div>

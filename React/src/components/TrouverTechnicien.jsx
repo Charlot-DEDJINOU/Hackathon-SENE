@@ -1,6 +1,6 @@
 import React, { useState , useEffect, useContext } from "react";
 import {useNavigate} from "react-router-dom"
-import Technicien from "./Technicien.js";
+import Technicien from "./Technicien.jsx";
 import styled from "styled-components"
 import '../styles/TrouverTechnicien.css';
 import { UserContext } from "./ContextUser.jsx";
@@ -21,37 +21,29 @@ background-color: #00A34D ;
 export default function ListeTechnicien(){ 
 
   useEffect(()=> {
-    fetch("http://localhost/projets/api/reparateur/reparateurs.php")
+    fetch("http://localhost:8000/api/reparateurs")
         .then((response) => response.json())
         .then((reparateurs) => {
-          if(reparateurs.message)
-          {
-            SetAlldata([])
-            setdata([])
-          }
-          else
-          {
-            SetAlldata(reparateurs["reparateurs"])
-            setdata(reparateurs["reparateurs"])
-          }
+            SetAlldata(reparateurs)
+            setdata(reparateurs)
         })
         .catch((error) => alert(error.stack));
     } , [])
 
     useEffect(()=> {
-      fetch("http://localhost/projets/api/ville/villes.php")
+      fetch("http://localhost:8000/api/villes")
           .then((response) => response.json())
           .then((villes) => {
-            Setvilles(villes["villes"])
+            Setvilles(villes)
           })
           .catch((error) => alert(error.stack));
       } , [])
 
     useEffect(()=> {
-      fetch("http://localhost/projets/api/metier/metiers.php")
+      fetch("http://localhost:8000/api/metiers")
           .then((response) => response.json())
           .then((metiers) => {
-            Setmetiers(metiers["metiers"])
+            Setmetiers(metiers)
           })
           .catch((error) => alert(error.stack));
       } , [])

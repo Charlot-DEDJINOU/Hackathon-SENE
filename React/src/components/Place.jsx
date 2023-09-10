@@ -12,7 +12,7 @@ const PlaceContainer = styled.div`
   flex-direction : column ;
   justify-content: space-evenly ;
   align-items:center ;
-  margin : 20px ;
+  margin : 18px ;
 `
 
 const DescriptionContainer = styled.div`

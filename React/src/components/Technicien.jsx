@@ -13,10 +13,10 @@ export default function Technicien(props)
 
   const newchat =(id_reparateur) =>{
 
-    const id_utilisateur = JSON.parse(localStorage.getItem("utilisateur")).id
+    const utilisateur = JSON.parse(localStorage.getItem("utilisateur")).id
 
     var info ={
-      "id_utilisateur" : id_utilisateur ,
+      "id_utilisateur" : utilisateur ,
       "id_ami" : id_reparateur ,
     }
 
@@ -30,17 +30,16 @@ export default function Technicien(props)
         .catch((error) => alert(error.stack));
   }
 
-   const photo = "http://localhost/projets/images/"+props.image
     return(
         <div>
               <section className="technicien">
               <div className="entete-technicien" onClick={()=> navigate("/ProfilReparateur/"+props.id_utilisateur)}>
                 <div className="info-photo-technicien">
                     <div>
-                        <img src={props.image === undefined || props.image === "icone" ? photostandard : photo} alt='Technicien' className="photo-technicien"></img>
+                        <img src={props.image === undefined || props.image === "icone" ? photostandard : props.image} alt='Technicien' className="photo-technicien"></img>
                     </div>
                     <div className="info-technicien">
-                        <span className="nom-technicien">{props.nom_utilisateur+" "+props.prenom_utilisateur}</span><br/>
+                        <span className="nom-technicien">{props.user.nom+" "+props.user.prenom}</span><br/>
                         <span className="metier-technicien" style={{fontSize:"15px"}}>{props.metier}</span><br/>
                         <span className="experience-technicien">{props.annee_experience} ans d'expérience</span><br/>
                         <span className="ville-technicien">{props.ville} </span>

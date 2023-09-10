@@ -103,10 +103,6 @@ function  Header() {
                 {
                     isLogin  && <div className='message-header'>
                     <FaCommentDots className="icone-messenger" onClick={() => navigate("/conversation/0")}/>
-                    <div className='notification'>
-                        <span className='Badge-notification'>2</span>
-                        <BsFillBellFill className="icone-notification" onClick={() => navigate("/notifications")}/>
-                    </div>
                 </div>
                 }
                 <div className='panier' onClick={handleShowCart} >
