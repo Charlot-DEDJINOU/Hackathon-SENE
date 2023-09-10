@@ -5,6 +5,8 @@ use App\Http\Controllers\MaterielController ;
 use App\Http\Controllers\VilleController;
 use App\Http\Controllers\QuartierController;
 use App\Http\Controllers\LieuDepotController;
+use App\Http\Controllers\MetierController;
+use App\Http\Controllers\ReparateurController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login',  [UserController::class, 'authenticate']);
@@ -26,3 +28,8 @@ Route::post('/quartier' , [QuartierController::class , 'create']);
 Route::get('/quartiers' , [QuartierController::class , 'read']);
 Route::post('/lieuDepot' , [LieuDepotController::class , 'create']);
 Route::get('/lieuDepots' , [LieuDepotController::class , 'read']);
+Route::post('/metier' , [MetierController::class , 'create']);
+Route::get('/metiers' , [MetierController::class , 'read']);
+Route::post('/reparateur' , [ReparateurController::class , 'create']);
+Route::get('/reparateurs' , [ReparateurController::class , 'read']);
+Route::get('/reparateur' , [ReparateurController::class , 'read_only']);
