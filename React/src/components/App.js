@@ -12,14 +12,14 @@ import Produits from "./Produits";
 // import Apropos from "./Apropos" ;
 import ListeTechnicien from "./TrouverTechnicien"
 import LieuxDepot from "./LieuxDeDepot";
-// import EnregistrerDEEE from "./EnregistrerDEEE";
+import EnregistrerDEEE from "./EnregistrerDEEE";
 import Reparateur from "./Reparateur" ;
 import PresentationLieuDeDepot from "./PresentationLieuDeDepot";
 // import EnvoyerMail from "./EnvoyerMail"
 // import ChangerMotdepasse from "./ChangerMotdepasse";
 // import Blog from "./Blog"
 // import PresentationArticle from "./PresentationArticle";
-// import Contact from "./Contact"
+import Contact from "./Contact"
 // import SuiviDEEE from "./SuiviDEEE";
 // import Conversation from "./Conversation";
 // import ProfilReparateur from "./ProfilReparateur"
@@ -41,8 +41,9 @@ function App() {
                   <Route path="presentationLieu/:id" element={<PresentationLieuDeDepot />} />
                   <Route path="reparateurs" element={<ListeTechnicien />} />
                   <Route path="reparateur" element={<Reparateur />} />
-                  {/* 
+                  <Route path="contact" element={<Contact />} />
                   <Route path="enregistrer_DEEEs" element={<EnregistrerDEEE />} />
+                  {/* 
                   <Route path="A_propos" element={<Apropos />} />
                   <Route path="EnvoyerMail" element={<EnvoyerMail/>} />
                   <Route path="ChangerMotdepasse" element={<ChangerMotdepasse />} />
@@ -51,7 +52,6 @@ function App() {
                   <Route path="Blog" element={<Blog />} />
                   <Route path="presentationArticle/:id" element={<PresentationArticle />} />
                   <Route path="suivie" element={<SuiviDEEE />} />
-                  <Route path="contact" element={<Contact />} />
                   <Route path="ProfilReparateur/:id" element={<ProfilReparateur />} /> */}
               </Routes>
               <Footer />

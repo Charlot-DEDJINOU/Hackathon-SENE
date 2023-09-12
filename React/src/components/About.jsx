@@ -2,7 +2,7 @@ import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import {useNavigate} from "react-router-dom"
 import styled from 'styled-components'
-import aboutimage from '../assets/aboutimage (2).jpg'
+import aboutimage from '../assets/team.jpg'
 
 
 const Container = styled.div`
@@ -25,6 +25,7 @@ const AboutContainer = styled.div`
 const Imagecontainer = styled.img`
   width: 50%;
   height: 90%;
+  object-fit : contain ;
   position: relative;
   margin-right: 3rem;
 `
