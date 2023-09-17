@@ -1,26 +1,27 @@
 import React, { useState , useEffect} from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
-import ProgressBarre from './react-step-progress-bar.js';
+import ProgressBarre from './react-step-progress-bar.jsx';
+import SuiviData from './SuiviData.jsx';
 import '../styles/SuiviDEEE.css'
 
 export default function SuiviDEEE()
 {
 
-  const utilisateur_id = JSON.parse(localStorage.getItem("utilisateur")).id
+  // const utilisateur_id = JSON.parse(localStorage.getItem("utilisateur")).id
 
-  useEffect(()=> {
-    fetch("http://localhost/projets/api/enregistrement_deees/deees_users.php?data="+utilisateur_id)
-        .then((response) => response.json())
-        .then((deees) => {
-            if(deees.message)
-              setdeees([])
-            else
-              setdeees(deees["enregistrement_deees"])
-        })
-        .catch((error) => alert(error.stack));
-    } , [utilisateur_id])
+  // useEffect(()=> {
+  //   fetch("http://localhost/projets/api/enregistrement_deees/deees_users.php?data="+utilisateur_id)
+  //       .then((response) => response.json())
+  //       .then((deees) => {
+  //           if(deees.message)
+  //             setdeees([])
+  //           else
+  //             setdeees(deees["enregistrement_deees"])
+  //       })
+  //       .catch((error) => alert(error.stack));
+  //   } , [utilisateur_id])
   
-  const [deees , setdeees] = useState([])
+  const [deees , setdeees] = useState(SuiviData)
   const [searchText, setSearchText] = useState('');
   const filteredData = deees.filter(item => item.id.toLowerCase().includes(searchText.toLowerCase()));
 

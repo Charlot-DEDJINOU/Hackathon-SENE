@@ -20,7 +20,7 @@ import PresentationLieuDeDepot from "./PresentationLieuDeDepot";
 // import Blog from "./Blog"
 // import PresentationArticle from "./PresentationArticle";
 import Contact from "./Contact"
-// import SuiviDEEE from "./SuiviDEEE";
+import SuiviDEEE from "./SuiviDEEE";
 // import Conversation from "./Conversation";
 // import ProfilReparateur from "./ProfilReparateur"
 // import TableList from "./Dashbord/Dashbord";
@@ -43,6 +43,7 @@ function App() {
                   <Route path="reparateur" element={<Reparateur />} />
                   <Route path="contact" element={<Contact />} />
                   <Route path="enregistrer_DEEEs" element={<EnregistrerDEEE />} />
+                  <Route path="suivie" element={<SuiviDEEE />} />
                   {/* 
                   <Route path="A_propos" element={<Apropos />} />
                   <Route path="EnvoyerMail" element={<EnvoyerMail/>} />
@@ -51,7 +52,7 @@ function App() {
                   <Route path="conversation/:id" element={<Conversation />}/>
                   <Route path="Blog" element={<Blog />} />
                   <Route path="presentationArticle/:id" element={<PresentationArticle />} />
-                  <Route path="suivie" element={<SuiviDEEE />} />
+                  
                   <Route path="ProfilReparateur/:id" element={<ProfilReparateur />} /> */}
               </Routes>
               <Footer />

@@ -62,7 +62,7 @@ export default function ProgressBarre(props) {
               <div className={EtatTraitement? 'circle vert-circle': 'circle cendre'}>
                 {EtatTraitement ? 
                 <i className='fa fa-check' style={{color:"white", width:'95%', height:'95%'}}>
-                <img src={Process1} alt="" style={{borderRadius:"50%", width:"100%", height:"100%", padding:"auto"}}/>
+                <img src={Process} alt="" style={{borderRadius:"50%", width:"100%", height:"100%", padding:"auto"}}/>
                 </i> : 
                 <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>Traitement 
                 <img src={Process} alt="" className='rotate'/>
