@@ -198,7 +198,7 @@ export default function Connexion() {
       var button = document.getElementById("button")
       button.value="Connexion ..."
 
-      fetch('http://localhost:8000/api/login', {
+      fetch('http://192.168.1.186:8000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
